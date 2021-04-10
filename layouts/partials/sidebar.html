@@ -1,0 +1,28 @@
+<aside>
+    <style>
+        .active {
+            color: green;
+        }
+    </style>
+    <ul>
+        <li><a href="/">Index</a></li>
+        {{ $currentPage := . }}
+        {{ range $.Site.Sections }}
+            <li>
+                {{ .Title }}
+                <ul>
+                    {{ range .RegularPages }}
+                        <li>
+                            <a
+                                href="{{ .RelPermalink }}"
+                                class="{{ if eq $currentPage.RelPermalink .RelPermalink }}active{{ end }}"
+                            >
+                                <span>{{ .Title }}</span>
+                            </a>
+                        </li>
+                    {{ end }}
+                </ul>
+            </li>
+        {{ end }}
+    </ul>
+</aside>

@@ -1,0 +1,4 @@
+baseURL = "http://example.org/"
+languageCode = "fr-ca"
+title = "My New Hugo Site"
+disableKinds = ["taxonomy", "taxonomyTerm"]

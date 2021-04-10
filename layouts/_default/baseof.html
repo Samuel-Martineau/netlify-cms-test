@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>{{ .Site.Title }}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="/bundle.css" />
+        {{ template "_internal/opengraph.html" . }}
+    </head>
+    <body>
+        <h1>Baseof</h1>
+        {{ partial "sidebar" . }}
+        <main>
+            {{ block "main" . }}{{ end }}
+        </main>
+    </body>
+</html>
