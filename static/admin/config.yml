@@ -1,6 +1,7 @@
 backend:
     name: github
     repo: Samuel-Martineau/netlify-cms-test
+    branch: main
     open_authoring: true
 
 publish_mode: editorial_workflow
@@ -17,3 +18,4 @@ collections:
       fields:
           - { label: "Titre", name: "title", widget: "string" }
           - { label: "Brouillon", name: "draft", widget: "boolean" }
+          - { label: "Texte", name: "body", widget: "markdown" }
