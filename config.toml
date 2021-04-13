@@ -1,4 +1,4 @@
-baseURL = "https://nervous-jones-656dd1.netlify.app/"
+baseURL = "https://wiki-collaboratif-test.netlify.app/"
 languageCode = "fr-ca"
 title = "Netlify CMS Test"
 disableKinds = ["taxonomy", "taxonomyTerm"]
