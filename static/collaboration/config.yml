@@ -16,6 +16,13 @@ collections:
       create: true
       slug: "{{slug}}"
       fields:
-          - { label: "Titre", name: "title", widget: "string" }
-          - { label: "Brouillon", name: "draft", widget: "boolean" }
-          - { label: "Texte", name: "body", widget: "markdown" }
+          - label: "Titre"
+            name: "title"
+            widget: "string"
+          - label: "Brouillon"
+            name: "draft"
+            default: true
+            widget: "boolean"
+          - label: "Texte"
+            name: "body"
+            widget: "markdown"

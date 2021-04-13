@@ -1,4 +1,5 @@
 {{ define "main" }}
-    <h1>Single</h1>
+    <h1>{{ .Title }}</h1>
     {{ .Content }}
+    <a href="/collaboration/#/edit/{{ .File.Path }}">Modifier cette page</a>
 {{ end }}

@@ -4,11 +4,11 @@
         <title>{{ .Site.Title }}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="UTF-8" />
-        <link rel="stylesheet" href="/bundle.css" />
+        {{ $style := resources.Get "scss/main.scss" | toCSS | minify | fingerprint }}
+        <link rel="stylesheet" href="{{ $style.Permalink }}" />
         {{ template "_internal/opengraph.html" . }}
     </head>
     <body>
-        <h1>Baseof</h1>
         {{ partial "sidebar" . }}
         <main>
             {{ block "main" . }}{{ end }}
