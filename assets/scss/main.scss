@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 :root {
-    --body-pading: 75px;
+    --body-padding: 75px;
     @media screen and (max-width: 992px) {
-        --body-pading: 25px;
+        --body-padding: 25px;
     }
 }
 
@@ -20,8 +20,8 @@ h6 {
     margin: 0;
 }
 
-body,
-html {
+html,
+body {
     margin: 0;
     padding: 0;
     height: 100%;
@@ -31,9 +31,15 @@ body {
     display: flex;
 }
 
+nav,
+main {
+    overflow: hidden;
+}
+
 nav {
-    padding: var(--body-pading);
     flex: 0 0 calc(max(min(25vw, 350px), 200px));
+
+    padding: var(--body-padding);
 
     & > ul {
         padding: 0;
@@ -64,11 +70,21 @@ nav {
 }
 
 main {
-    padding: var(--body-pading);
-    overflow: hidden;
     width: 100%;
 
-    img {
-        max-width: 100%;
+    & > div {
+        height: 100%;
+        overflow-y: auto;
+        padding: var(--body-padding);
+        padding-bottom: 0;
+        box-sizing: border-box;
+        img {
+            max-width: 100%;
+        }
+        &::after {
+            content: "";
+            display: block;
+            margin-top: var(--body-padding);
+        }
     }
 }
