@@ -1,7 +1,10 @@
 {{ define "main" }}
     <h1>{{ .Title }}</h1>
     {{ .Content }}
-    <a href="/collaboration/#/edit/{{ replace .File.Path `.md` `` }}"
-        >Modifier cette page</a
+    <a
+        href="/collaboration/#/edit/{{ replace .CurrentSection.File.Dir `/` `` }}/{{ .File.BaseFileName }}"
     >
+        Modifier cette page
+    </a>
+    <p></p>
 {{ end }}
