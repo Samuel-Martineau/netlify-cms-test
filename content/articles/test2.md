@@ -1,5 +1,5 @@
 ---
-title: test2
+title: test2 - test
 draft: false
 ---
 blabla
